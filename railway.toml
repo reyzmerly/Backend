@@ -1,2 +1,5 @@
-[deploy]
-startCommand = "gunicorn --bind 0.0.0.0:${PORT:-8000} app:app"
+[build]
+builder = "NIXPACKS"
+
+[start]
+cmd = "gunicorn --bind 0.0.0.0:${PORT:-8000} app:app"
