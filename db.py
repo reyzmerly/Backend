@@ -3,10 +3,10 @@ import os
 
 def get_connection():
     return pymysql.connect(
-        host=os.getenv("hayabusa.proxy.rlwy.net"),
-        user=os.getenv("root"),
-        password=os.getenv("gcfzImRXSJzmtjfplbPsoWuotsXEOjhL"),
-        db=os.getenv("railway"),
-        port=int(os.getenv("58615")),
+        host=os.getenv("DB_HOST"),
+        user=os.getenv("DB_USER"),
+        password=os.getenv("DB_PASS"),
+        db=os.getenv("DB_NAME"),
+        port=int(os.getenv("DB_PORT")),
         cursorclass=pymysql.cursors.DictCursor
     )
