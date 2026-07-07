@@ -6,6 +6,10 @@ app = Flask(__name__)
 CORS(app)
 
 # ---------- GET ALL TASKS ----------
+@app.get("/")
+def home():
+    return "Backend is running"
+
 @app.get("/api/tasks")
 def get_tasks():
     conn = get_connection()
